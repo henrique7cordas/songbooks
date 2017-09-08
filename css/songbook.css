@@ -1,0 +1,173 @@
+div.login-dialog {
+	background: rgba(0,0,0,0.75);
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 999998;
+	display: none;
+}
+
+div.login-dialog span {
+	display: block;
+	margin-top: 7%;
+	text-align: center;
+	font-family: Open Sans, sans-serif;
+	font-size: 30px;
+	color: #fff;
+	text-shadow: 3px 2px 14px rgba(0, 0, 0, 0.78);
+}
+
+div.book-footer {
+	font-family: Open Sans;
+	font-weight: lighter;
+	font-size: 16px;
+	color: #fff;
+	text-align: center;
+	height: 40px;
+	line-height: 40px;
+	vertical-align: middle;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+div.smb7-middle-center {
+	height: 100%;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+div.book-footer,
+div.book-footer a {
+	color: rgba(255,255,255,0.75);
+}
+
+
+div.window-title-bar {
+	display: none;
+}
+
+body.title-window div.window-title-bar {
+	display: block;
+}
+
+body.title-window {
+	height: auto !important;
+}
+
+body.title-window div.samba7-book-description {
+	top: 191px !important;
+}
+
+body.title-window div.samba7-player,
+body.title-window div.samba7-menu {
+	top: 93px !important;
+}
+
+body.title-window div.samba7-home-header {
+	margin-top: 33px !important;
+}
+
+body.title-window div.samba7-header {
+	margin-top: 34px !important;
+}
+
+div.book-contents div.book-musics {
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 20px;
+}
+
+	div.book-musics ul.smb7-music-list {
+		list-style: none;
+		padding: 0;
+		margin: 7px 0 7px -3px;
+		color: #fff;
+		font-family: Open Sans;
+	}
+
+		ul.smb7-music-list li.smb7-music {
+			background: -moz-linear-gradient(left, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+			background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0.1)), color-stop(100%,rgba(255,255,255,0))); /* Chrome4-9,Safari4-5 */
+			background: -webkit-linear-gradient(left, rgba(255,255,255,0.1) 0%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+			background: -o-linear-gradient(left, rgba(255,255,255,0.1) 0%,rgba(255,255,255,0) 100%); /* Opera 11.10-11.50 */
+			background: -ms-linear-gradient(left, rgba(255,255,255,0.1) 0%,rgba(255,255,255,0) 100%); /* IE10 preview */
+			background: linear-gradient(to right, rgba(255,255,255,0.1) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1affffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 */
+			margin-bottom: 3px;
+			width: 100%;
+			cursor: pointer;
+		}
+
+		ul.smb7-music-list li.smb7-music:hover {
+			background: -moz-linear-gradient(left, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+			background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0.2)), color-stop(100%,rgba(255,255,255,0))); /* Chrome4-9,Safari4-5 */
+			background: -webkit-linear-gradient(left, rgba(255,255,255,0.2) 0%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+			background: -o-linear-gradient(left, rgba(255,255,255,0.2) 0%,rgba(255,255,255,0) 100%); /* Opera 11.10-11.50 */
+			background: -ms-linear-gradient(left, rgba(255,255,255,0.2) 0%,rgba(255,255,255,0) 100%); /* IE10 preview */
+			background: linear-gradient(to right, rgba(255,255,255,0.2) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 */
+		}
+
+			li.smb7-music div.smb7-music-number,
+			li.smb7-music div.smb7-music-info {
+				display: inline-block;
+				vertical-align: top;
+			}
+
+			li.smb7-music div.smb7-music-number {
+				font-weight: lighter;
+				font-size: 25px;
+				padding: 5.9px;
+				color: rgba(255,255,255, 0.85);
+			}
+
+				li.smb7-music div.smb7-music-info {
+					padding: 4px 60px 4px 0px;
+				}
+
+					div.smb7-music-info em {
+						display: block;
+						font-style: normal;
+					}
+
+					div.smb7-music-info em.m-name {
+						font-size: 17px;
+					}
+
+					div.smb7-music-info em.m-composer {
+						font-weight: lighter;
+						font-size: 11px;
+						margin-top: -3px;
+						color: rgba(255,255,255, 0.75);
+					}
+
+				li.smb7-music div.smb7-music-buttons {
+					float: right;
+					display: block;
+					visibility: hidden;
+					height: 1px;
+				}
+
+				li.smb7-music:hover div.smb7-music-buttons {
+					height: auto;
+					visibility: visible;
+				}
+
+					div.smb7-music-buttons a.music-button {
+						display: inline-block;
+						width: 27px;
+						height: 30px;
+						margin: 7px 4px;
+					}
+
+					a.music-button.spotify  {
+						background: url('https://henrique7cordas.github.io/songbooks/images/spotify-button-small.png') no-repeat center;
+					}
+
+					a.music-button.play {
+						background: url('https://henrique7cordas.github.io/songbooks/images/music-play-button.png') no-repeat center;
+					}

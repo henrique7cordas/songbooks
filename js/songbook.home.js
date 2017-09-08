@@ -1,0 +1,1 @@
+SongBookMusic.prototype.open=function(){var o=songbook.getConfiguration().getMusicMap();return document.location.href=o.get(this.getNumber()).getOpenLink(),this};var SongBookHome={populateSongBookInfo:function(){window.songbook.getBookLogoElement().attr("title",songbook.getConfiguration().getFullName())}};

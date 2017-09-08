@@ -1,0 +1,101 @@
+html.round,
+body.round {
+  border-radius: 8px;
+}
+
+div.window-title-bar {
+  height: 33px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  user-select: none;
+  z-index: 999999;
+  padding: 2px 2px 0 2px;
+}
+
+div.window-title-bar div.draggable-area {
+  -webkit-app-region: drag;
+  height: 31px;
+}
+
+div.window-title-bar div.title-label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 133px;
+  bottom: 0;
+  line-height: 33px;
+  vertical-align: middle;
+  font-family: Open Sans, sans-serif;
+  font-size: 14px;
+  color: #fff;
+  padding-left: 10px;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow:hidden !important;
+  text-overflow: ellipsis;
+}
+
+div.window-title-bar div.title-label span.account-select {
+  display: inline-block;
+  margin-left: 12px;
+  margin-top: -4px;
+  border-left: solid 1px rgba(255,255,255,0.2);
+  padding-left: 36px;
+  height: 21px;
+  line-height: 21px;
+  vertical-align: middle;
+  font-size: 11px;
+  background: url('https://henrique7cordas.github.io/songbooks/images/padlock-icon.png') no-repeat 12px center;
+  -webkit-app-region: no-drag;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+div.window-title-bar div.title-label span.account-select:hover {
+  text-decoration: underline;
+  opacity: 1;
+}
+
+div.window-title-bar div.control-buttons {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  -webkit-app-region: no-drag;
+}
+
+div.window-title-bar div.control-buttons a.button {
+  display: inline-block;
+  height: 100%;
+  padding: 0 17.5px;
+}
+
+div.window-title-bar div.control-buttons a.button.minimize {
+  background: url('https://henrique7cordas.github.io/songbooks/images/window-minimize-button.png') no-repeat center;
+  width: 10px;
+}
+
+div.window-title-bar div.control-buttons a.button.restore {
+  background: url('https://henrique7cordas.github.io/songbooks/images/window-restore-button.png') no-repeat center;
+  width: 8px;
+}
+
+div.window-title-bar div.control-buttons a.button.maximize {
+  background: url('https://henrique7cordas.github.io/songbooks/images/window-maximize-button.png') no-repeat center;
+  width: 8px;
+}
+
+div.window-title-bar div.control-buttons a.button.close {
+  background: url('https://henrique7cordas.github.io/songbooks/images/window-close-button.png') no-repeat center;
+  width: 10px;
+}
+
+div.window-title-bar div.control-buttons a.button:hover {
+  background-color: rgba(255,255,255,0.15) !important;
+}
+
+div.window-title-bar div.control-buttons a.button:active {
+  background-color: rgba(255,255,255,0.3) !important;
+}

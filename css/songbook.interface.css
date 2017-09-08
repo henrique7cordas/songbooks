@@ -1,0 +1,903 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+div.samba7-header {
+	background: rgba(0, 0, 0, 0.3);
+	position: relative;
+}
+	div.samba7-header div.smb7-menu-placeholder {
+		width: 182px;
+	}
+
+		div.smb7-menu-placeholder a.smb7-menu-button,
+		div.smb7-menu-placeholder div.logo {
+			display: inline-block;
+			vertical-align: top;
+		}
+
+		div.smb7-menu-placeholder a.smb7-menu-button {
+			margin: 20px 12px 0 12px;
+		}
+
+		div.smb7-menu-placeholder a.smb7-home-button {
+			text-decoration: none;
+		}
+
+		div.smb7-menu-placeholder div.logo {
+			margin: 8px 0;
+			padding-right: 20px;
+			border-color: #5E2A2B;
+			border-right: solid 1px rgba(255,255,255, 0.10);
+		}
+
+	div.samba7-header div.smb7-music-name {
+		position: absolute;
+		left: 182px;
+		top: 0;
+		line-height: 60px;
+		vertical-align: middle;
+	}
+
+		div.smb7-music-name h1{
+			font-family: Open Sans;
+			font-size: 18px;
+			font-weight: lighter;
+			color: #fff;
+			color: rgba(255,255,255, 0.85);
+			margin: 0;
+			padding: 0 20px 0 20px;
+		}
+
+	div.samba7-header div.smb7-music-panel {
+		position: absolute;
+		right: 0px;
+		top: 0;
+		bottom: 0;
+	}
+
+	div.samba7-header div.smb7-music-parts {
+		display: inline-block;
+		vertical-align: top;
+	}
+
+		div.smb7-music-parts ul.songbook-music-part-list {
+			list-style: none;
+			margin-right: 16px;
+			font-family: Open Sans;
+			font-weight: lighter;
+			color: #fff;
+			margin: 13px 20px 13px 0;
+		}
+
+			ul.songbook-music-part-list li {
+				display: inline-block;
+				margin: 0px 5px;
+				padding: 6px 10px;
+				background-color: #5E2A2B;
+				background: rgba(255,255,255,0.10);
+				border-radius: 6px;
+				cursor: pointer;
+			}
+
+			ul.songbook-music-part-list li.selected {
+				background-color: #B7A0A1;
+				background: rgba(255,255,255,0.60);
+				font-weight: bold;
+			}
+
+	div.samba7-header div.smb7-control-buttons {
+		display: inline-block;
+		vertical-align: top;
+	}
+
+		div.smb7-control-buttons a.button {
+			width: 40px;
+			height: 60px;
+			display: inline-block;
+			margin: 0 2px;
+		}
+
+		div.smb7-control-buttons a.button.play {
+			background: url('https://henrique7cordas.github.io/songbooks/images/songbook-play-small.png') no-repeat center;
+		}
+
+		div.smb7-control-buttons a.button.stop {
+			background: url('https://henrique7cordas.github.io/songbooks/images/songbook-stop-small.png') no-repeat center;
+		}
+
+		div.smb7-control-buttons a.button.paused {
+			background: url('https://henrique7cordas.github.io/songbooks/images/songbook-pause-small.png') no-repeat center;
+		}
+
+		div.smb7-control-buttons a.button.repeat {
+			background: url('https://henrique7cordas.github.io/songbooks/images/repeat-icon-off.png') no-repeat center;
+		}
+
+		div.smb7-control-buttons a.button.selected {
+			background-color: #633132;
+			background-color: rgba(255,255,255, 0.13);
+		}
+
+		div.smb7-control-buttons a.button.repeat.selected {
+			background: url('https://henrique7cordas.github.io/songbooks/images/repeat-icon-on.png') no-repeat center;
+		}
+
+	div.samba7-menu {
+		position: absolute;
+		left: 0;
+		top: 60px;
+		bottom: 0;
+		overflow-y: auto;
+		display: none;
+		z-index: 150;
+	}
+
+	div.samba7-menu.open {
+		display: block;
+	}
+
+		div.samba7-menu div.book-musics {
+			margin-top: 0;
+		}
+
+			div.book-musics ul.smb7-music-list {
+				margin: 0;
+			}
+
+				ul.smb7-music-list li.smb7-music div.smb7-music-buttons {
+					padding-right: 15px;
+					opacity: 0.6;
+				}
+
+				ul.smb7-music-list li.smb7-music.selected {
+					/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0.25+0,0+100 */
+					background: -moz-linear-gradient(left, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+					background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0.25)), color-stop(100%,rgba(255,255,255,0))); /* Chrome4-9,Safari4-5 */
+					background: -webkit-linear-gradient(left, rgba(255,255,255,0.25) 0%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+					background: -o-linear-gradient(left, rgba(255,255,255,0.25) 0%,rgba(255,255,255,0) 100%); /* Opera 11.10-11.50 */
+					background: -ms-linear-gradient(left, rgba(255,255,255,0.25) 0%,rgba(255,255,255,0) 100%); /* IE10 preview */
+					background: linear-gradient(to right, rgba(255,255,255,0.25) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#40ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 */
+				}
+
+				ul.smb7-music-list li.smb7-music.selected div.smb7-music-buttons {
+					height: auto;
+					visibility: visible;
+					opacity: 1;
+				}
+
+div.samba7-player {
+	position: absolute;
+	top: 60px;
+	left: 0;
+	right: 0;
+	bottom: 40px;
+	overflow-y: auto;
+}
+
+	div.samba7-player div.player-container {
+		display: table;
+    	margin: 0 auto;
+    	height: 100%;
+	}
+
+		div.player-container div.smb7-songbook-player {
+			border: solid 10px rgba(255,255,255,0.15);
+			border-radius: 5px;
+		}
+
+		div.smb7-songbook-player.debugging {
+				display: block;
+				margin-right: 501px;
+				margin-left: 120px;
+		}
+
+		div.smb7-songbook-player.review-mode {
+			border: solid 10px #282C34 !important;
+			margin-left: 0 !important;
+		}
+
+			div.smb7-songbook-player.small,
+			div.smb7-songbook-player.medium {
+				position: relative !important;
+			}
+
+			div.smb7-songbook-player.review-mode div.youtube-player {
+				display: none !important;
+			}
+
+			div.smb7-songbook-player.small div.youtube-player {
+				width: 685px;
+				height: 360px;
+			}
+
+			div.smb7-songbook-player.small div.sheet-reviewer {
+				width: 685px;
+			}
+
+			div.smb7-songbook-player.medium div.youtube-player {
+				width: 800px;
+				height: 450px;
+			}
+
+			div.smb7-songbook-player.medium div.sheet-reviewer {
+				width: 685px;
+			}
+
+			div.smb7-songbook-player.fullhd div.youtube-player {
+				width: 1032px;
+				height: 580px;
+			}
+
+			div.smb7-songbook-player.fullhd div.sheet-reviewer {
+				width: 1081px;
+			}
+
+			div.smb7-songbook-player.tabs-view.small div.youtube-player {
+				width: 590px;
+				height: 310px;
+			}
+
+			div.smb7-songbook-player.tabs-view.medium div.youtube-player {
+				width: 712px;
+				height: 400px;
+			}
+
+
+			div.smb7-songbook-player.tabs-view.fullhd div.youtube-player {
+				width: 890px;
+				height: 500px;
+			}
+
+				div.smb7-songbook-player iframe.youtube-frame {
+					width: 100%;
+					height: 100%;
+					border: none;
+				}
+
+			div.smb7-songbook-player div.player-controls {
+				background: #000;
+				position: relative;
+				height: 37px;
+			}
+
+			div.smb7-songbook-player.review-mode div.player-controls {
+				display: none !important;
+			}
+
+			div.smb7-songbook-player.small div.player-controls,
+			div.smb7-songbook-player.medium div.player-controls {
+				position: absolute;
+				width: 100px;
+				left: -120px;
+				top: -10px;
+				height: auto;
+				border-radius: 10px;
+				overflow: hidden;
+			}
+
+				div.player-controls ul {
+					margin: 0;
+					padding: 0;
+					list-style: none;
+					font-family: Open Sans;
+					color: #fff;
+				}
+
+					div.player-controls ul li {
+						display: inline-block;
+						padding: 6.5px 25px 10.5px 25px;
+						vertical-align: middle;
+						text-align: center;
+						cursor: pointer;
+					}
+
+					div.smb7-songbook-player.tabs-view div.player-controls ul li {
+						padding: 6.5px 15px 10.5px 15px;
+					}
+
+					div.player-controls ul li:hover {
+						background-color: #1F1F1F;
+						background-color: rgba(255,255,255,0.15);
+					}
+
+					div.player-controls ul li.selected {
+						background: url('https://henrique7cordas.github.io/songbooks/images/select-dot.png') no-repeat 10px 18px;
+						background-color: #1F1F1F;
+						background-color: rgba(255,255,255,0.15);
+					}
+
+					div.smb7-songbook-player.tabs-view div.player-controls ul li.selected {
+						background-position: 5px 18px;
+					}
+
+					div.smb7-songbook-player.small ul li,
+					div.smb7-songbook-player.medium ul li {
+						padding-left: 0 !important;
+						padding-right: 0 !important;
+						border-top: solid 1px rgba(255,255,255,0.4);
+						width: 100px;
+					}
+
+					div.smb7-songbook-player.small ul li:first-child,
+					div.smb7-songbook-player.medium ul li:first-child {
+						border-top: none;
+					}
+
+					div.smb7-songbook-player.small ul.smb7-sheet-ctrls li:first-child,
+					div.smb7-songbook-player.medium ul.smb7-sheet-ctrls li:first-child {
+						border-top: solid 1px rgba(255,255,255,0.4);
+					}
+
+					div.player-controls ul li span {
+						display: block;
+						vertical-align: middle;
+					}
+
+					div.player-controls ul li span.spd-type {
+						line-height: 10px;
+						font-weight: lighter;
+						font-size: 8px;
+					}
+
+					div.player-controls ul li span.spd-display {
+						line-height: 10px;
+						font-size: 14px;
+					}
+
+
+				div.player-controls div.speed-ctrls {
+					position: absolute;
+					top: 0;
+					left: 0;
+					bottom: 0;
+				}
+
+				div.player-controls div.sheet-ctrls {
+					position: absolute;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					white-space: nowrap;
+				}
+
+				div.smb7-songbook-player.no-sheet div.player-controls div.sheet-ctrls {
+					display: none;
+				}
+
+				div.smb7-songbook-player.small div.player-controls div.sheet-ctrls,
+				div.smb7-songbook-player.medium div.player-controls div.sheet-ctrls {
+					white-space: normal;
+				}
+
+				div.smb7-songbook-player.small div.player-controls div.speed-ctrls,
+				div.smb7-songbook-player.small div.player-controls div.sheet-ctrls {
+					position: static !important;
+				}
+
+				div.smb7-songbook-player.medium div.player-controls div.speed-ctrls,
+				div.smb7-songbook-player.medium div.player-controls div.sheet-ctrls {
+					position: static !important;
+				}
+
+					/*
+					div.sheet-ctrls div.show-notenames {
+						line-height: 37px;
+						vertical-align: middle;
+						font-family: Open Sans;
+						font-weight: lighter;
+						font-size: 10px;
+						color: #fff;
+						padding-left: 25px;
+						padding-right: 15px;
+						background: url('https://henrique7cordas.github.io/songbooks/images/checkbox.png') no-repeat 11px center;
+						cursor: pointer;
+					}
+
+					div.sheet-ctrls div.show-notenames.selected {
+						background: url('https://henrique7cordas.github.io/songbooks/images/checkbox-ch.png') no-repeat 11px center;
+					}
+
+					div.sheet-ctrls div.show-notenames:hover {
+						background-color: #121212;
+						background-color: rgba(255,255,255,0.07);
+					}
+
+					div.sheet-ctrls div.show-notenames,
+					div.sheet-ctrls ul.smb7-sheet-ctrls {
+						float: left;
+					}
+					*/
+
+					div.sheet-ctrls ul li span.spd-display {
+						margin: 7px 0 3px 0;
+					}
+
+					div.player-controls ul li.selected {
+						background-position: 10px center;
+					}
+
+					div.player-controls ul li.image {
+						padding: 6px 12px 10px 12px;
+						background: transparent;
+					}
+
+					div.player-controls ul li.image img {
+						vertical-align: middle;
+						opacity: 0.2;
+						display: inline-block;
+					}
+
+					div.player-controls ul li.image:hover img {
+						opacity: 0.6;
+					}
+
+					div.player-controls ul li.image.selected img {
+						opacity: 1;
+					}
+
+			div.player-container div.smb7-debugger-container {
+				display: none;
+				background: #282C34;
+				padding: 10px;
+				border-radius: 8px;
+				overflow-y: auto;
+				font-family: Consolas;
+				font-size: 14px;
+				color: #fff;
+				position: fixed;
+				top: 70px;
+				right: 10px;
+				bottom: 70px;
+				width: 460px;
+				z-index: 200;
+			}
+
+			div.player-container div.smb7-debugger-container.enabled {
+				display: block;
+			}
+
+				div.player-container div.smb7-debugger-container a.edit-button {
+					display: block;
+					width: 20px;
+					height: 25px;
+					cursor: pointer;
+					position: absolute;
+					top: 10px;
+					right: 10px;
+					background: url('https://henrique7cordas.github.io/songbooks/images/edit-button.png') no-repeat top left;
+					opacity: 0.3;
+				}
+
+				div.player-container div.smb7-debugger-container a.edit-button:hover {
+					opacity: 0.55;
+				}
+
+				div.player-container div.smb7-debugger-container a.edit-button.enabled {
+					opacity: 1;
+				}
+
+				div.player-container div.smb7-debugger-container a.review-button {
+					display: block;
+					width: 30px;
+					height: 25px;
+					cursor: pointer;
+					position: absolute;
+					top: 10px;
+					right: 43px;
+					background: url('https://henrique7cordas.github.io/songbooks/images/review-button.png') no-repeat top left;
+					opacity: 0.3;
+				}
+
+				div.player-container div.smb7-debugger-container a.review-button:hover {
+					opacity: 0.55;
+				}
+
+				div.player-container div.smb7-debugger-container a.review-button.enabled {
+					opacity: 1;
+				}
+
+				div.smb7-debugger-container ul {
+					list-style: none;
+					margin: 0;
+					padding: 0 5px 0px 20px;
+					border-left: solid 1px rgba(255,255,255,0.12);
+				}
+
+				div.smb7-debugger-container ul.smb7-debugger,
+				div.smb7-debugger-container ul.smb7-music-parts {
+					padding-left: 0;
+					border-left: none;
+				}
+
+				div.smb7-debugger-container ul li.initial-tree {
+					display: none;
+				}
+
+				div.smb7-debugger-container ul em {
+					font-style: normal;
+				}
+
+				div.smb7-debugger-container ul em.bracket {
+					color: #E68A63;
+				}
+
+				div.smb7-debugger-container ul.smb7-music-parts li:last-child em.comma,
+				div.smb7-debugger-container ul.smb7-debugger li.last > em.comma,
+				div.smb7-debugger-container ul.smb7-debugger li.last > span > em.comma {
+					display: none;
+				}
+
+				div.smb7-debugger-container ul span.unset {
+					display: inline-block;
+					background: rgba(255,255,255,0.3);
+					width: 15px;
+					height: 15px;
+			    text-align: center;
+			    vertical-align: bottom;
+					color: #0db556 !important;
+				}
+
+				div.smb7-debugger-container ul em.start,
+				div.smb7-debugger-container ul em.end,
+				div.smb7-debugger-container ul em.prop,
+				div.smb7-debugger-container div.sheet-limits em.number {
+					color: #7DBF9A;
+				}
+
+				div.smb7-debugger-container ul em.line-bars {
+					display: none;
+				}
+
+				div.smb7-debugger-container ul li.custom-bars em.line-bars {
+					display: inline-block;
+				}
+
+				div.smb7-debugger-container ul li.custom-bars em.line-bars span.bar-num {
+					padding: 3px 19px 3px 5px;
+					background: url('https://henrique7cordas.github.io/songbooks/images/line-break.png') no-repeat 16px center;
+					background-color: #329632;
+					border-radius: 3px;
+				}
+
+				div.smb7-debugger-container div.sheet-limits em.number {
+					font-style: normal;
+				}
+
+				div.smb7-debugger-container ul li {
+					padding: 1px 3px;
+					cursor: pointer;
+				}
+
+				div.smb7-debugger-container ul.music-bars li:hover {
+					background: rgba(255,255,255,0.12);
+				}
+
+				div.smb7-debugger-container ul li.selected {
+					background: rgba(255,255,255,0.21) !important;
+				}
+
+				div.smb7-debugger-container ul li.speed-type.selected,
+				div.smb7-debugger-container ul li.music-part.selected {
+					background: transparent !important;
+				}
+
+				div.smb7-debugger-container ul em.start.selected,
+				div.smb7-debugger-container ul em.end.selected {
+					background: rgba(255,255,255,0.21) !important;
+					padding: 0 4px;
+				}
+
+				div.smb7-debugger-container ul li:hover > span.label {
+					background: rgba(255,255,255,0.12);
+					padding: 0 4px;
+				}
+
+				div.smb7-debugger-container ul li.selected > span.label {
+					background: rgba(255,255,255,0.21);
+					padding: 0 4px;
+				}
+
+				div.smb7-debugger-container ul li span.end {
+					display: block;
+					margin-bottom: 15px;
+				}
+
+				div.smb7-debugger-container ul li span.part-times {
+					display: block;
+					color: rgba(255,255,255,0.5);
+				}
+
+			div.smb7-debugger-messages {
+				position: fixed;
+				left: 0;
+				right: 0;
+				top: 50%;
+				text-align: center;
+				display: none;
+			}
+
+				div.smb7-debugger-messages div.modal-dialog {
+					background: rgba(0,0,0,0.8);
+					padding: 15px;
+					display: inline-block;
+					font-family: consolas;
+					font-size: 31px;
+					color: #fff;
+					margin-right: 276px;
+					margin-top: 30px;
+					border-radius: 10px;
+					max-width: 700px;
+					box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.78);
+					position: relative;
+					overflow: hidden;
+				}
+
+				div.modal-dialog div.message-type {
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					font-size: 10px;
+					text-align: center;
+					padding: 3px 0;
+					color: rgba(255,255,255,0.5);
+				}
+
+				div.modal-dialog span.command {
+					color: #64B1FF;
+				}
+
+				div.modal-dialog em {
+					font-style: normal;
+					background: rgba(255,255,255, 0.08);
+					border-radius: 6px;
+					padding: 0 7px;
+					vertical-align: middle;
+				}
+
+				div.modal-dialog em.arrow {
+					font-family: Myriad Pro;
+				}
+
+			div.smb7-songbook-player div.player-sheets {
+				display: block;
+				position: relative;
+			}
+
+			div.smb7-songbook-player.no-sheet div.player-sheets,
+			div.smb7-songbook-player.review-mode div.player-sheets {
+				display: none;
+			}
+
+			div.smb7-songbook-player.small div.player-sheets {
+				width: 685px;
+			}
+
+			div.smb7-songbook-player.medium div.player-sheets {
+				width: 800px;
+			}
+
+			div.smb7-songbook-player.fullhd div.player-sheets {
+				width: 1032px;
+			}
+
+			div.smb7-songbook-player.tabs-view.small div.player-sheets {
+				width: 590px;
+			}
+
+			div.smb7-songbook-player.tabs-view.medium div.player-sheets {
+				width: 712px;
+			}
+
+			div.smb7-songbook-player.tabs-view.fullhd div.player-sheets {
+				width: 890px;
+			}
+
+				div.player-sheets div.zoom-controller {
+					position: absolute;
+					left: 0;
+					top: 0;
+					bottom: 0;
+					right: 0;
+					z-index: 3;
+				}
+
+				div.player-sheets div.zoom-controller.disabled {
+					display: none !important;
+				}
+
+					 div.zoom-controller div.zoom-placehold {
+						display: none;
+						position: absolute;
+						width: 150px;
+						top: 5px;
+						left: 5px;
+						bottom: 5px;
+						background: rgba(0,0,0,0.15);
+						z-index: 4;
+						border: solid 2px rgba(0,0,0,0.35);
+					}
+
+					div.zoom-controller:hover div.zoom-placehold {
+						display: block;
+					}
+
+					div.smb7-songbook-player.tabs-view div.zoom-placehold {
+						width: 200px;
+					}
+
+						div.zoom-placehold div.zoom-placehold-delimiter {
+							width: 100%;
+							height: 100%;
+							position: relative;
+						}
+
+							div.zoom-placehold-delimiter div.zoom-container {
+								position: absolute;
+								top: -339px;
+								left: -104px;
+								width: 306px;
+								border: solid 3px rgba(0,0,0,0.4);
+								border-radius: 8px;
+								background-color: #fff;
+								background-repeat: no-repeat;
+								background-position: left center;
+								background-size: cover;
+								height: 279px;
+								z-index: 200;
+							}
+
+							div.smb7-songbook-player.tabs-view.small div.zoom-container {
+								top: -357px;
+								left: -105px;
+								width: 365px;
+								height: 337px;
+							}
+
+							div.smb7-songbook-player.medium div.zoom-container {
+								top: -339px;
+								left: -103px;
+								width: 370px;
+								height: 320px;
+							}
+
+							div.smb7-songbook-player.tabs-view.medium div.zoom-container {
+								top: -357px;
+								left: -83px;
+								width: 365px;
+								height: 337px;
+							}
+
+							div.smb7-songbook-player.tabs-view.fullhd div.zoom-container {
+								height: 500px;
+								width: 418px;
+								top: -560px;
+							}
+
+				div.player-sheets img {
+					display: block;
+					width: 100%;
+					height: auto;
+					-webkit-backface-visibility: hidden;
+					-ms-transform: translateZ(0); /* IE 9 */
+					-webkit-transform: translateZ(0); /* Chrome, Safari, Opera */
+					transform: translateZ(0);
+				}
+
+			div.smb7-songbook-player div.sheet-reviewer {
+				background: #282C34;
+				display: none;
+			}
+
+			div.smb7-songbook-player.review-mode div.sheet-reviewer {
+				display: block;
+			}
+
+				div.sheet-reviewer img.display-image {
+					display: block;
+					width: 100%;
+					height: auto;
+					-webkit-backface-visibility: hidden;
+					-ms-transform: translateZ(0); /* IE 9 */
+					-webkit-transform: translateZ(0); /* Chrome, Safari, Opera */
+					transform: translateZ(0);
+					padding-top: 25px;
+				}
+
+				div.sheet-reviewer div.rvw-view {
+					position: relative;
+					background: #fff;
+				}
+
+				div.smb7-songbook-player.fullhd div.sheet-reviewer div.rvw-view {
+					min-height: 181.5px;
+				}
+
+					div.rvw-view div.view-label {
+						position: absolute;
+						top: 0;
+						left: 0;
+						right: 0;
+						background: rgba(0,0,0,0.2);
+						font-family: Open Sans;
+						font-size: 15px;
+						color: #333;
+						text-align: center;
+						padding: 3px 0;
+						z-index: 3;
+					}
+
+					div.rvw-view div.not-found-message {
+						position: absolute;
+						top: 0;
+						left: 0;
+						right: 0;
+						bottom: 0;
+						background: url('https://henrique7cordas.github.io/songbooks/images/warn-icon-big.png') no-repeat center center;
+						background-color: #E4E4E4;
+						line-height: 173px;
+						text-align: center;
+						vertical-align: middle;
+						font-family: Open Sans;
+						font-size: 18px;
+						color: #5A5A5A;
+						display: none;
+					}
+
+					div.rvw-view.opened div.not-found-message {
+						display: block;
+					}
+
+					div.rvw-view div.not-found-message em {
+						font-style: normal;
+						font-weight: bold;
+						color: #282C34;
+					}
+
+				div.sheet-reviewer div.rvw-controls {
+					font-family: Open Sans;
+					color: rgba(255,255,255,0.8);
+					padding: 7px 0 2px 0;
+					text-align: center;
+				}
+
+					div.rvw-controls div.ctrs-label {
+						display: inline-block;
+						font-size: 16px;
+						vertical-align: middle;
+					}
+
+					div.rvw-controls div.ctrs-numbers {
+						display: inline-block;
+						font-size: 20px;
+						vertical-align: middle;
+					}
+
+						div.ctrs-numbers ul.cmp-numbers {
+							list-style: none;
+							margin: 0 0 0 8px;
+							padding: 0;
+						}
+
+							ul.cmp-numbers li {
+								display: inline-block;
+								margin: 0 4px;
+								padding: 3px 10px;
+								background: rgba(255,255,255, 0.05);
+								border-radius: 50%;
+								cursor: pointer;
+							}
+
+							ul.cmp-numbers li:hover {
+								background: rgba(255,255,255, 0.12);
+							}
+
+							ul.cmp-numbers li.selected {
+								background: rgba(255,255,255, 0.4);
+								font-style: bold;
+								color: #fff;
+							}

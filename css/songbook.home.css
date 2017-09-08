@@ -1,0 +1,90 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+body {
+	visibility: hidden;
+}
+
+body.complete {
+	visibility: visible;
+}
+
+div.samba7-home-header {
+	background-color: #4C1213;
+	background: rgba(0, 0, 0, 0.3);
+}
+
+	div.samba7-home-header img {
+		display: block;
+		margin: 0 auto;
+		padding: 29px 0;
+		user-select: none;
+		height: 100px;
+	}
+
+div.samba7-book-description {
+	position: absolute;
+	top: 158px;
+	left: 0;
+	right: 0;
+	bottom: 40px;
+}
+
+	div.samba7-book-description div.book-container {
+		display: table;
+		margin: 0 auto;
+		height: 100%;
+	}
+
+		div.smb7-middle-center {
+			height: 100%;
+			display: table-cell;
+			vertical-align: middle;
+		}
+
+			div.smb7-middle-center div.book-contents {
+
+			}
+
+				div.book-contents div.book-logo {
+					width: 392px;
+					display: inline-block;
+					vertical-align: top;
+					margin-top: 20px;
+				}
+
+					div.book-contents div.book-logo img {
+						display: block;
+						border: solid 7px rgba(0,0,0,0.3);
+						user-select: none;
+					}
+
+					div.book-contents div.songbook-play-button {
+						margin: 25px auto 70px auto;
+						width: 205px;
+						height: 76px;
+					}
+
+						div.songbook-play-button a {
+							display: block;
+							text-decoration: none;
+							border-radius: 8px;
+							padding: 10px 30px 10px 70px;
+							margin: 0;
+							font-family: Open Sans, Helvetica, Arial;
+							font-weight: lighter;
+							font-size: 50px;
+							border: none;
+							cursor: pointer;
+							-webkit-box-shadow: 3px 3px 7px -1px rgba(0,0,0,0.49);
+							-moz-box-shadow: 3px 3px 7px -1px rgba(0,0,0,0.49);
+							box-shadow: 3px 3px 7px -1px rgba(0,0,0,0.49);
+							opacity: 0.9;
+						}
+
+						div.songbook-play-button a:hover {
+							opacity: 1;
+						}
