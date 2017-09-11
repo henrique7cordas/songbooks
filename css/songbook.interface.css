@@ -383,35 +383,6 @@ div.samba7-player {
 					position: static !important;
 				}
 
-					/*
-					div.sheet-ctrls div.show-notenames {
-						line-height: 37px;
-						vertical-align: middle;
-						font-family: Open Sans;
-						font-weight: lighter;
-						font-size: 10px;
-						color: #fff;
-						padding-left: 25px;
-						padding-right: 15px;
-						background: url('https://henrique7cordas.github.io/songbooks/images/checkbox.png') no-repeat 11px center;
-						cursor: pointer;
-					}
-
-					div.sheet-ctrls div.show-notenames.selected {
-						background: url('https://henrique7cordas.github.io/songbooks/images/checkbox-ch.png') no-repeat 11px center;
-					}
-
-					div.sheet-ctrls div.show-notenames:hover {
-						background-color: #121212;
-						background-color: rgba(255,255,255,0.07);
-					}
-
-					div.sheet-ctrls div.show-notenames,
-					div.sheet-ctrls ul.smb7-sheet-ctrls {
-						float: left;
-					}
-					*/
-
 					div.sheet-ctrls ul li span.spd-display {
 						margin: 7px 0 3px 0;
 					}
@@ -438,6 +409,46 @@ div.samba7-player {
 					div.player-controls ul li.image.selected img {
 						opacity: 1;
 					}
+
+			div.smb7-songbook-player div.sheet-preloader {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background: rgba(0,0,0,0.6);
+				z-index: 100;
+				display: none;
+			}
+
+				div.sheet-preloader div.md-center {
+					margin: -34px 0 0 -171.5px;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+				}
+
+					div.md-center div.prld-label {
+						font-family: Open Sans;
+						font-size: 35px;
+						font-weight: lighter;
+						text-align: center;
+						color: #fff;
+					}
+
+					div.md-center div.progress-bar {
+						width: 330px;
+						height: 25px;
+						border: solid 1px #fff;
+						margin-top: 5px;
+					}
+
+						div.md-center div.progress-bar span {
+							display: block;
+							background: #fff;
+							width: 0;
+							height: 100%;
+						}
 
 			div.player-container div.smb7-debugger-container {
 				display: none;
