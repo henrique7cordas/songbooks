@@ -1,3 +1,24 @@
+div.permission-error {
+	display: none;
+	position: absolute;
+  z-index: 99999999;
+  bottom: 38px;
+  left: 0;
+  right: 0;
+  background: #d41010;
+  height: 50px;
+}
+
+	div.permission-error span {
+		text-align: center;
+    display: block;
+    line-height: 50px;
+    vertical-align: middle;
+    font-family: Open Sans;
+    font-weight: bold;
+    color: #fff;
+	}
+
 div.login-dialog {
 	background: rgba(0,0,0,0.75);
 	position: absolute;
