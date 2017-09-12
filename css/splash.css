@@ -7,7 +7,7 @@ div.samba7go-logo {
 	background: url('https://henrique7cordas.github.io/songbooks/images/samba7.go.logo.png') no-repeat center;
 }
 
-div.samba7go-logo div.loaders {
+div.loaders {
 	position: absolute;
 	left: 0;
 	right: 0;
@@ -15,17 +15,17 @@ div.samba7go-logo div.loaders {
 	user-select: none;
 }
 
-div.samba7go-logo div.loaders div.center {
+div.loaders div.center {
 	width: 300px;
 	margin: 0 auto;
 	padding-left: 50px;
 }
 
-div.samba7go-logo div.loader-cont {
+div.loader-cont {
 	display: inline-block;
 }
 
-div.samba7go-logo div.loader {
+div.loader {
 	box-sizing: border-box;
 	display: flex;
 	flex: 0 1 auto;
@@ -39,12 +39,12 @@ div.samba7go-logo div.loader {
 	justify-content: center;
 }
 
-div.samba7go-logo div.loader,
-div.samba7go-logo div.loader-inner {
+div.loader,
+div.loader-inner {
 	width: 140px;
 }
 
-div.samba7go-logo div.loader .ball-beat > div {
+div.loader .ball-beat > div {
 	width: 40px !important;
 	height: 40px !important;
 }
