@@ -68,23 +68,36 @@ div.samba7-book-description {
 						height: 76px;
 					}
 
-						div.songbook-play-button a {
-							display: block;
-							text-decoration: none;
-							border-radius: 8px;
-							padding: 10px 30px 10px 70px;
-							margin: 0;
-							font-family: Open Sans, Helvetica, Arial;
-							font-weight: lighter;
-							font-size: 50px;
-							border: none;
-							cursor: pointer;
-							-webkit-box-shadow: 3px 3px 7px -1px rgba(0,0,0,0.49);
-							-moz-box-shadow: 3px 3px 7px -1px rgba(0,0,0,0.49);
-							box-shadow: 3px 3px 7px -1px rgba(0,0,0,0.49);
-							opacity: 0.9;
+						div.songbook-play-button a.play {
+								display: inline-block;
+								cursor: pointer;
+								background: #fff;
+								padding: 2px 20px 9px 20px;
+								font-family: Open Sans;
+								font-size: 50px;
+								border-radius: 6px;
+								-webkit-box-shadow: 3px 3px 7px -1px rgba(0,0,0,0.49);
+								-moz-box-shadow: 3px 3px 7px -1px rgba(0,0,0,0.49);
+								box-shadow: 3px 3px 7px -1px rgba(0,0,0,0.49);
+								opacity: 0.9;
+								text-decoration: none;
+								color: #000;
 						}
 
-						div.songbook-play-button a:hover {
+						div.songbook-play-button a.play:hover {
 							opacity: 1;
+						}
+
+						div.songbook-play-button a.play span.symbol,
+						div.songbook-play-button a.play span.text {
+							vertical-align: middle;
+						}
+
+						div.songbook-play-button a.play span.symbol {
+							display: inline-block;
+							width: 0;
+							height: 0;
+							border-style: solid;
+							border-width: 25px 0 25px 30px;
+							border-color: transparent transparent transparent #000000;
 						}
