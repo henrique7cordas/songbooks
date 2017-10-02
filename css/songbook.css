@@ -144,6 +144,8 @@ div.book-contents div.book-musics {
 				font-size: 25px;
 				padding: 5.9px;
 				color: rgba(255,255,255, 0.85);
+				min-width: 30px;
+				text-align: right;
 			}
 
 				li.smb7-music div.smb7-music-info {
