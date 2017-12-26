@@ -123,7 +123,8 @@ div.book-contents div.book-musics {
 			cursor: pointer;
 		}
 
-		ul.smb7-music-list li.smb7-music:hover {
+		ul.smb7-music-list li.smb7-music:hover,
+		ul.smb7-music-list li.smb7-music.selected {
 			background: -moz-linear-gradient(left, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
 			background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0.2)), color-stop(100%,rgba(255,255,255,0))); /* Chrome4-9,Safari4-5 */
 			background: -webkit-linear-gradient(left, rgba(255,255,255,0.2) 0%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
@@ -175,7 +176,8 @@ div.book-contents div.book-musics {
 					height: 1px;
 				}
 
-				li.smb7-music:hover div.smb7-music-buttons {
+				li.smb7-music:hover div.smb7-music-buttons,
+				li.smb7-music.selected div.smb7-music-buttons {
 					height: auto;
 					visibility: visible;
 				}
